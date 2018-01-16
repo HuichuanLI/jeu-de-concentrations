@@ -1,0 +1,37 @@
+<!--
+*
+*@author li  huichuan
+*@copyright Gpl
+-->
+<!DOCTYPE HTML PUBLIC >
+<html>
+  <head>
+    <title> concentration </title>
+    <script type="text/javascript" src="./javascript/app.js" ></script>
+  </head>
+  <body >
+    <h2>jeu de concentrations<hr></h2>
+    <p> In turn, each player chooses two cards and turns them face up. If they are of the same card, the photo are paired. If not, we start new round!</p>
+    <table border = "6" bordercolor = "#6666FF" bgcolor = "#DDFFDD" cellspacing = "5" align="center">
+
+    <script language="javascript">
+      
+
+      cols=5;
+      rows=4;
+      for (r = 0; r < rows; r++) {
+        mm='<tr>';// on va utliser la tableau pour realiser
+        for (c = 0; c < cols; c++) {
+		      mm+='<td align="center">'; // pour realiser  la map   
+          mm+='<a href="javascript:showimage('+((cols*r)+c)+')" >';  // utliser la fonction pour monter la photo 
+          mm+='<img src="photo 1/memory-back.png" id="img'+((cols*r)+c)+'" border="0">'; // pour monter cette photo par back
+          mm+='</a></td>';
+        }
+        mm+='</tr>';
+		    document.write(mm);
+      }
+    </script>
+    </table>
+    <center><input type="button" value="start" id="btnReset" onclick="init()"  style="height:200px;width:200px;" /></center>
+  </body>
+</html>
